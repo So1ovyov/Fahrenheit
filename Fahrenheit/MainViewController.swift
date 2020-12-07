@@ -17,38 +17,9 @@ class MainViewController: UIViewController {
         return view
     }()
     
-    let topLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Converter"
-        label.font = UIFont(name: "Copperplate", size: 40)
-        label.textColor = .systemBlue
-        label.backgroundColor = .clear
-        label.textAlignment = .center
-        return label
-    }()
-    
-    let celsiusLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "0°C"
-        label.font = UIFont(name: "Copperplate", size: 40)
-        label.textColor = .black
-        label.backgroundColor = .clear
-        label.textAlignment = .center
-        return label
-    }()
-    
-    let fahrenheitLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "32°F"
-        label.font = UIFont(name: "Copperplate", size: 40)
-        label.textColor = .black
-        label.backgroundColor = .clear
-        label.textAlignment = .center
-        return label
-    }()
+    let topLabel = CustomLabel()
+    let celsiusLabel = CustomLabel()
+    let fahrenheitLabel = CustomLabel()
     
     let converterSlider: UISlider = {
         let slider = UISlider()
@@ -57,6 +28,7 @@ class MainViewController: UIViewController {
         slider.maximumValue = 100
         slider.value = 0
         slider.isContinuous = true
+        slider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
         return slider
     }()
     
@@ -64,7 +36,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .darkGray
         imageView.isUserInteractionEnabled = true
-        converterSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
+        setupLabels()
         setupConstraints()
     }
     
@@ -73,6 +45,12 @@ class MainViewController: UIViewController {
         celsiusLabel.text = "\(temperatureCelsius)°C"
         let temperatureFahrenheit = Int(round((sender.value * 9 / 5) + 32))
         fahrenheitLabel.text = "\(temperatureFahrenheit)°F"
+    }
+    
+    func setupLabels() {
+        topLabel.setupLabelText(text: "Converter")
+        celsiusLabel.setupLabelText(text: "0°C")
+        fahrenheitLabel.setupLabelText(text: "32°F")
     }
     
     func setupConstraints() {

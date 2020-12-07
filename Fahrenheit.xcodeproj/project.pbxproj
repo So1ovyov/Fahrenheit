@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1CAF11F257E52B3002A09E6 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CAF11E257E52B3002A09E6 /* CustomLabel.swift */; };
 		F1FE9401257159CE00AE8A9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FE9400257159CE00AE8A9B /* AppDelegate.swift */; };
 		F1FE9403257159CE00AE8A9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FE9402257159CE00AE8A9B /* SceneDelegate.swift */; };
 		F1FE940A257159CF00AE8A9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FE9409257159CF00AE8A9B /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F1CAF11E257E52B3002A09E6 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		F1FE93FD257159CE00AE8A9B /* Fahrenheit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fahrenheit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1FE9400257159CE00AE8A9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1FE9402257159CE00AE8A9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				F1FE9400257159CE00AE8A9B /* AppDelegate.swift */,
 				F1FE9402257159CE00AE8A9B /* SceneDelegate.swift */,
 				F1FE941825715A3C00AE8A9B /* MainViewController.swift */,
+				F1CAF11E257E52B3002A09E6 /* CustomLabel.swift */,
 				F1FE9409257159CF00AE8A9B /* Assets.xcassets */,
 				F1FE940B257159CF00AE8A9B /* LaunchScreen.storyboard */,
 				F1FE940E257159CF00AE8A9B /* Info.plist */,
@@ -136,6 +139,7 @@
 				F1FE941925715A3C00AE8A9B /* MainViewController.swift in Sources */,
 				F1FE9401257159CE00AE8A9B /* AppDelegate.swift in Sources */,
 				F1FE9403257159CE00AE8A9B /* SceneDelegate.swift in Sources */,
+				F1CAF11F257E52B3002A09E6 /* CustomLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
